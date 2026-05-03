@@ -1,0 +1,37 @@
+name: Update Volcano Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run update script
+        run: node scripts/update-volcanoes.mjs
+
+      - name: Commit and push changes
+        run: |
+          if [[ -n "$(git status --porcelain public/data/volcanoes.json)" ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/data/volcanoes.json
+            git commit -m "chore(data): refresh volcanoes.json [skip ci]"
+            git push
+            echo "Committed updated volcano data"
+          else
+            echo "No changes to volcanoes.json"
+          fi
