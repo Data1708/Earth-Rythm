@@ -1,0 +1,512 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-02T21:38:54.900Z",
+  "sources": {
+    "smithsonianRSS": "https://volcano.si.edu/news/WeeklyVolcanoRSS.xml",
+    "usgsHANS": "https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes"
+  },
+  "counts": {
+    "total": 45,
+    "reportedThisWeek": 0,
+    "warning": 1,
+    "watch": 9,
+    "advisory": 35
+  },
+  "volcanoes": [
+    {
+      "name": "Merapi",
+      "country": "Indonesia",
+      "lat": -7.54,
+      "lon": 110.45,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Semeru",
+      "country": "Indonesia",
+      "lat": -8.108,
+      "lon": 112.92,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Lewotobi",
+      "country": "Indonesia",
+      "lat": -8.53,
+      "lon": 122.78,
+      "level": "warning",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Ibu",
+      "country": "Indonesia",
+      "lat": 1.488,
+      "lon": 127.63,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Marapi",
+      "country": "Indonesia",
+      "lat": -0.381,
+      "lon": 100.473,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Krakatau",
+      "country": "Indonesia",
+      "lat": -6.102,
+      "lon": 105.423,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Dukono",
+      "country": "Indonesia",
+      "lat": 1.693,
+      "lon": 127.894,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Karangetang",
+      "country": "Indonesia",
+      "lat": 2.781,
+      "lon": 125.407,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Sakurajima",
+      "country": "Japan",
+      "lat": 31.583,
+      "lon": 130.66,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Suwanosejima",
+      "country": "Japan",
+      "lat": 29.638,
+      "lon": 129.714,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Aira",
+      "country": "Japan",
+      "lat": 31.59,
+      "lon": 130.66,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Taal",
+      "country": "Philippines",
+      "lat": 14.002,
+      "lon": 120.993,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Kanlaon",
+      "country": "Philippines",
+      "lat": 10.412,
+      "lon": 123.132,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Mayon",
+      "country": "Philippines",
+      "lat": 13.257,
+      "lon": 123.685,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Sheveluch",
+      "country": "Russia",
+      "lat": 56.653,
+      "lon": 161.36,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Klyuchevskoy",
+      "country": "Russia",
+      "lat": 56.056,
+      "lon": 160.642,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Bezymianny",
+      "country": "Russia",
+      "lat": 55.972,
+      "lon": 160.595,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Karymsky",
+      "country": "Russia",
+      "lat": 54.05,
+      "lon": 159.45,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Great Sitkin",
+      "country": "USA",
+      "lat": 52.076,
+      "lon": -176.13,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Shishaldin",
+      "country": "USA",
+      "lat": 54.756,
+      "lon": -163.97,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Atka volcanic complex",
+      "country": "USA",
+      "lat": 52.378,
+      "lon": -174.139,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Kilauea",
+      "country": "USA",
+      "lat": 19.421,
+      "lon": -155.287,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Popocatepetl",
+      "country": "Mexico",
+      "lat": 19.023,
+      "lon": -98.622,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Fuego",
+      "country": "Guatemala",
+      "lat": 14.473,
+      "lon": -90.88,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Santa Maria",
+      "country": "Guatemala",
+      "lat": 14.756,
+      "lon": -91.552,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Pacaya",
+      "country": "Guatemala",
+      "lat": 14.382,
+      "lon": -90.601,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "San Cristobal",
+      "country": "Nicaragua",
+      "lat": 12.702,
+      "lon": -87.004,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Masaya",
+      "country": "Nicaragua",
+      "lat": 11.985,
+      "lon": -86.165,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Poas",
+      "country": "Costa Rica",
+      "lat": 10.2,
+      "lon": -84.233,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Rincon de la Vieja",
+      "country": "Costa Rica",
+      "lat": 10.83,
+      "lon": -85.324,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Reventador",
+      "country": "Ecuador",
+      "lat": -0.077,
+      "lon": -77.656,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Sangay",
+      "country": "Ecuador",
+      "lat": -2.005,
+      "lon": -78.341,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Nevado del Ruiz",
+      "country": "Colombia",
+      "lat": 4.892,
+      "lon": -75.323,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Villarrica",
+      "country": "Chile",
+      "lat": -39.42,
+      "lon": -71.93,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Reykjanes",
+      "country": "Iceland",
+      "lat": 63.85,
+      "lon": -22.5,
+      "level": "watch",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Etna",
+      "country": "Italy",
+      "lat": 37.748,
+      "lon": 14.999,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Stromboli",
+      "country": "Italy",
+      "lat": 38.789,
+      "lon": 15.213,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Erta Ale",
+      "country": "Ethiopia",
+      "lat": 13.6,
+      "lon": 40.67,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Nyiragongo",
+      "country": "D.R. Congo",
+      "lat": -1.52,
+      "lon": 29.25,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Nyamuragira",
+      "country": "D.R. Congo",
+      "lat": -1.408,
+      "lon": 29.2,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Yasur",
+      "country": "Vanuatu",
+      "lat": -19.532,
+      "lon": 169.447,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Ambrym",
+      "country": "Vanuatu",
+      "lat": -16.25,
+      "lon": 168.12,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Tofua",
+      "country": "Tonga",
+      "lat": -19.75,
+      "lon": -175.07,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Ahyi",
+      "country": "USA (N. Marianas)",
+      "lat": 20.42,
+      "lon": 145.03,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "Heard",
+      "country": "Australia",
+      "lat": -53.106,
+      "lon": 73.513,
+      "level": "advisory",
+      "reportedThisWeek": false,
+      "sources": [
+        "baseline"
+      ]
+    }
+  ]
+}
