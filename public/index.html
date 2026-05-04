@@ -2718,7 +2718,7 @@ class WindLayer {
           // Lower alpha multiplier prevents additive saturation in dense
           // particle bands (jet streams) — without this, overlapping
           // particles wash out to solid white.
-          gl_FragColor = vec4(col * bright, fall * vAlpha * 0.45);
+          gl_FragColor = vec4(col * bright, fall * vAlpha * 0.6);
         }
       `
     });
