@@ -1,0 +1,98 @@
+name: Update Wind Data
+
+# Fetches NOAA GFS 10m wind data, processes via wgrib2, and commits a
+# downsampled JSON wind grid to public/data/wind.json.
+#
+# Runs daily at 08:00 UTC. GFS publishes 4 forecasts per day; we use the
+# most recent reliably-available one (with fallback to older runs if needed).
+#
+# wgrib2 is built from NOAA source rather than installed via apt, because
+# the apt package isn't reliably available on all Ubuntu runner versions.
+# The compiled binary is cached so subsequent runs are fast.
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Cache wgrib2 binary between runs so we only build it once.
+      # Cache key changes only if we change the wgrib2 version below.
+      - name: Cache wgrib2 binary
+        id: cache-wgrib2
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/bin/wgrib2
+          key: wgrib2-v3.6.0-${{ runner.os }}
+
+      - name: Install wgrib2 build dependencies
+        if: steps.cache-wgrib2.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential gfortran zlib1g-dev libpng-dev wget
+
+      - name: Build wgrib2 from source
+        if: steps.cache-wgrib2.outputs.cache-hit != 'true'
+        run: |
+          cd /tmp
+          # Download wgrib2 v3.6.0 (a stable, well-tested version)
+          wget -q https://www.ftp.cpc.ncep.noaa.gov/wd51we/wgrib2/wgrib2.tgz.v3.6.0 -O wgrib2.tgz
+          tar -xzf wgrib2.tgz
+          cd grib2
+          # Build with minimal options — we only need GRIB2 read + CSV output
+          export CC=gcc
+          export FC=gfortran
+          export USE_NETCDF3=0
+          export USE_NETCDF4=0
+          export USE_HDF5=0
+          export USE_REGEX=1
+          export USE_TIGGE=0
+          export USE_MYSQL=0
+          export USE_IPOLATES=0
+          export USE_SPECTRAL=0
+          export USE_UDF=0
+          export USE_OPENMP=0
+          export USE_PROJ4=0
+          export USE_WMO_VALIDATION=0
+          export DISABLE_TIMEZONE=1
+          export MAKE_FTN_API=0
+          export DISABLE_ALARM=0
+          export USE_NAMES=NCEP
+          make 2>&1 | tail -40
+          sudo cp wgrib2/wgrib2 /usr/local/bin/wgrib2
+          sudo chmod +x /usr/local/bin/wgrib2
+
+      - name: Verify wgrib2
+        run: |
+          which wgrib2
+          wgrib2 -version
+
+      - name: Run wind update script
+        run: node scripts/update-wind.mjs
+
+      - name: Commit and push changes
+        run: |
+          if [[ -n "$(git status --porcelain public/data/wind.json)" ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/data/wind.json
+            git commit -m "chore(data): refresh wind.json [skip ci]"
+            git push
+            echo "Committed updated wind data"
+          else
+            echo "No changes to wind.json"
+          fi
