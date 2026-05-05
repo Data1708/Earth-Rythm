@@ -2749,7 +2749,7 @@ class WindLayer {
           // headPos cycles 0 → 1 over a few seconds (per-line phase
           // offset breaks sync). We render only sprites within 0..0.55
           // behind the head (a tail of length 0.55 along the line).
-          float headPos = mod(time * 0.18 + vPhase, 1.0);
+          float headPos = mod(time * 0.10 + vPhase, 1.0);
           float dist = headPos - vT;
           float visible = step(0.0, dist) * step(dist, 0.55);
 
