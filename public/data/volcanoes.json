@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-08T10:13:37.955Z",
+  "generatedAt": "2026-06-09T08:56:47.828Z",
   "sources": {
     "smithsonianRSS": "https://volcano.si.edu/news/WeeklyVolcanoRSS.xml",
     "usgsHANS": "https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes"
@@ -66,9 +66,10 @@
       "lat": -0.381,
       "lon": 100.473,
       "level": "advisory",
-      "reportedThisWeek": false,
+      "reportedThisWeek": true,
       "sources": [
-        "baseline"
+        "baseline",
+        "smithsonian-rss(fuzzy)"
       ]
     },
     {
@@ -203,10 +204,9 @@
       "lat": 55.972,
       "lon": 160.595,
       "level": "advisory",
-      "reportedThisWeek": true,
+      "reportedThisWeek": false,
       "sources": [
-        "baseline",
-        "smithsonian-rss(fuzzy)"
+        "baseline"
       ]
     },
     {
@@ -364,10 +364,9 @@
       "lat": -0.077,
       "lon": -77.656,
       "level": "advisory",
-      "reportedThisWeek": true,
+      "reportedThisWeek": false,
       "sources": [
-        "baseline",
-        "smithsonian-rss(fuzzy)"
+        "baseline"
       ]
     },
     {
@@ -376,10 +375,9 @@
       "lat": -2.005,
       "lon": -78.341,
       "level": "advisory",
-      "reportedThisWeek": true,
+      "reportedThisWeek": false,
       "sources": [
-        "baseline",
-        "smithsonian-rss(fuzzy)"
+        "baseline"
       ]
     },
     {
@@ -388,9 +386,10 @@
       "lat": 4.892,
       "lon": -75.323,
       "level": "advisory",
-      "reportedThisWeek": false,
+      "reportedThisWeek": true,
       "sources": [
-        "baseline"
+        "baseline",
+        "smithsonian-rss(fuzzy)"
       ]
     },
     {
@@ -432,9 +431,10 @@
       "lat": 38.789,
       "lon": 15.213,
       "level": "advisory",
-      "reportedThisWeek": false,
+      "reportedThisWeek": true,
       "sources": [
-        "baseline"
+        "baseline",
+        "smithsonian-rss(fuzzy)"
       ]
     },
     {
