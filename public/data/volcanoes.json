@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-24T08:04:14.362Z",
+  "generatedAt": "2026-07-25T07:47:53.779Z",
   "sources": {
     "smithsonianRSS": "https://volcano.si.edu/news/WeeklyVolcanoRSS.xml",
     "usgsHANS": "https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes"
   },
   "counts": {
     "total": 45,
-    "reportedThisWeek": 16,
+    "reportedThisWeek": 17,
     "warning": 1,
     "watch": 9,
     "advisory": 35
@@ -124,10 +124,9 @@
       "lat": 29.638,
       "lon": 129.714,
       "level": "advisory",
-      "reportedThisWeek": true,
+      "reportedThisWeek": false,
       "sources": [
-        "baseline",
-        "smithsonian-rss(fuzzy)"
+        "baseline"
       ]
     },
     {
@@ -148,9 +147,10 @@
       "lat": 14.002,
       "lon": 120.993,
       "level": "advisory",
-      "reportedThisWeek": false,
+      "reportedThisWeek": true,
       "sources": [
-        "baseline"
+        "baseline",
+        "smithsonian-rss(fuzzy)"
       ]
     },
     {
@@ -253,9 +253,10 @@
       "lat": 52.378,
       "lon": -174.139,
       "level": "advisory",
-      "reportedThisWeek": false,
+      "reportedThisWeek": true,
       "sources": [
-        "baseline"
+        "baseline",
+        "smithsonian-rss(fuzzy)"
       ]
     },
     {
@@ -288,10 +289,9 @@
       "lat": 14.473,
       "lon": -90.88,
       "level": "advisory",
-      "reportedThisWeek": true,
+      "reportedThisWeek": false,
       "sources": [
-        "baseline",
-        "smithsonian-rss(fuzzy)"
+        "baseline"
       ]
     },
     {
@@ -300,10 +300,9 @@
       "lat": 14.756,
       "lon": -91.552,
       "level": "advisory",
-      "reportedThisWeek": true,
+      "reportedThisWeek": false,
       "sources": [
-        "baseline",
-        "smithsonian-rss(fuzzy)"
+        "baseline"
       ]
     },
     {
@@ -356,9 +355,10 @@
       "lat": 10.83,
       "lon": -85.324,
       "level": "advisory",
-      "reportedThisWeek": false,
+      "reportedThisWeek": true,
       "sources": [
-        "baseline"
+        "baseline",
+        "smithsonian-rss(fuzzy)"
       ]
     },
     {
@@ -511,9 +511,10 @@
       "lat": 20.42,
       "lon": 145.03,
       "level": "advisory",
-      "reportedThisWeek": false,
+      "reportedThisWeek": true,
       "sources": [
         "baseline",
+        "smithsonian-rss(fuzzy)",
         "usgs-hans"
       ]
     },
