@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T06:43:46.596Z",
+  "generatedAt": "2026-08-12T07:04:30.238Z",
   "sources": {
     "smithsonianRSS": "https://volcano.si.edu/news/WeeklyVolcanoRSS.xml",
     "usgsHANS": "https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes"
